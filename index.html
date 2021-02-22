@@ -11,6 +11,19 @@
 		<p>
 			this is main and the first paragragh
 		</p>
+		<input id="night_day" type="button" value="night" onclick="
+			var target = document.querySelector('body');
+			if(this.value==='night') {
+				target.style.backgroundColor = 'black';
+				target.style.color = 'white';
+				this.value = 'day';
+			} else {
+				target.style.backgroundColor = 'white';
+				target.style.color = 'black';
+				this.value = 'night';
+			}
+		">
+			<br><br>
 		<img src="cat.jpg" width="300">
 		<br><br><br><br>
 		<script>
