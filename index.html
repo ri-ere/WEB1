@@ -5,36 +5,69 @@
 		<title>
 			this is title
 		</title>
+		<style>
+			h1{
+				border-bottom: 1px solid black;
+				padding: 5px;
+				margin:1px;
+				margin-bottom: 10px;
+				text-align: center;
+				display: block;
+				width: 450px;	
+			}
+			ol{
+				border-right: 1px solid black;
+				padding: 5px;
+				padding-left: 20px;
+				margin:1px;	
+				display: block;
+				width: 80px;	
+			}
+			#grid{
+				display: grid;
+				grid-template-columns: 150px 1fr;	
+			}
+		</style>
 	</head>
 	<body>
 		<h1> Studying HTML </h1>
-		<p>
-			this is main and the first paragragh
-		</p>
-		<input id="night_day" type="button" value="night" onclick="
-			var target = document.querySelector('body');
-			if(this.value==='night') {
-				target.style.backgroundColor = 'black';
-				target.style.color = 'white';
-				this.value = 'day';
-			} else {
-				target.style.backgroundColor = 'white';
-				target.style.color = 'black';
-				this.value = 'night';
-			}
-		">
-			<br><br>
-		<img src="cat.jpg" width="300">
-		<br><br><br><br>
-		<script>
-			document.write('hello world this is my first javascript message<br/>');
-			document.write('testing calculation 1+1<br/>');
-			document.write(1+1, '<br/>');
-			document.write('testing button<br/>');
-		</script>
-		<br>
-		<input type="button" value="hi" onclick="alert('hii')">
-		<input type="text" onchange="alert('changed')">
-		<input type="text" onkeydown="alert('key down')">
+		<div id="grid">
+			<ol>
+				<a href="">1. First<br></a>
+				<a href="">2.Second<br></a>
+				<a href="">3.Third<br></a>
+				<a href="">4.Forth<br></a>
+			</ol>
+			<div>
+				<p>
+					this is main and the first paragragh
+				</p>
+				<input id="night_day" type="button" value="night" onclick="
+					var target = document.querySelector('body');
+					if(this.value==='night') {
+						target.style.backgroundColor = 'black';
+						target.style.color = 'white';
+						this.value = 'day';
+					} else {
+						target.style.backgroundColor = 'white';
+						target.style.color = 'black';
+						this.value = 'night';
+					}
+				">
+					<br><br>
+				<img src="cat.jpg" width="300">
+				<br><br><br><br>
+				<script>
+					document.write('hello world this is my first javascript message<br/>');
+					document.write('testing calculation 1+1<br/>');
+					document.write(1+1, '<br/>');
+					document.write('testing button<br/>');
+				</script>
+				<br>
+				<input type="button" value="hi" onclick="alert('hii')">
+				<input type="text" onchange="alert('changed')">
+				<input type="text" onkeydown="alert('key down')">
+			</div>
+		</div>
 	</body>
 </HTML>
