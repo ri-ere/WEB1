@@ -6,7 +6,7 @@
 			this is title
 		</title>
 		<style>
-			h1{
+			.main{
 				border-bottom: 1px solid black;
 				padding: 5px;
 				margin:1px;
@@ -30,7 +30,7 @@
 		</style>
 	</head>
 	<body>
-		<h1> Studying HTML </h1>
+		<h1 class="main"> Studying HTML </h1>
 		<div id="grid">
 			<ol>
 				<a href="">1. First<br></a>
@@ -41,19 +41,35 @@
 			<div>
 				<p>
 					this is main and the first paragragh
-				</p>
-				<input id="night_day" type="button" value="night" onclick="
-					var target = document.querySelector('body');
-					if(this.value==='night') {
-						target.style.backgroundColor = 'black';
-						target.style.color = 'white';
-						this.value = 'day';
-					} else {
-						target.style.backgroundColor = 'white';
-						target.style.color = 'black';
-						this.value = 'night';
-					}
-				">
+				</p>	
+
+					<input id="night_day" type="button" value="night" onclick="
+							var target = document.querySelector('body');
+							if(this.value==='night') {
+								target.style.backgroundColor = 'black';
+								target.style.color = 'white';
+								this.value = 'day';
+								
+								//document.querySelector('.main').border-bottom = 'white';
+								var alist = document.querySelectorAll('a');
+								var i = 0;
+								while(i<alist.length){
+									alist[i].style.color = 'powderblue';
+									i = i + 1;
+								}
+							} else {
+								target.style.backgroundColor = 'white';
+								target.style.color = 'black';
+								this.value = 'night';
+	
+								var alist = document.querySelectorAll('a');
+								var i = 0;
+								while(i<alist.length){
+									alist[i].style.color = 'blue';
+									i = i + 1;
+								}
+						}
+					">
 					<br><br>
 				<img src="cat.jpg" width="300">
 				<br><br><br><br>
